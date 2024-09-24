@@ -34,7 +34,7 @@
           </div>
           <div class="btn-box mt-3 md:mt-7">
             <button class="btn border-2 border-brand-color hover:bg-brand-color text-brand-color hover:text-white transition-all rounded-full
-            text-xl py-3 px-10 w-full" @click="sendData">
+            text-xl py-3 px-10 w-full">
               Отправить
             </button>
           </div>
@@ -85,13 +85,13 @@ export default {
         this.isEmpty = true;
       } else {
         this.isEmpty = false;
-        const chatId = 596968325; // Directly using the chat ID from the provided response
-        await this.sendMessageToTelegram(chatId); // Send message to Telegram
+        const chatId = 596968325;
+        await this.sendMessageToTelegram(chatId);
         this.isInfoSent = true;
       }
     },
     async sendMessageToTelegram(chatId) {
-      const token = '8073225287:AAFxU9OeXRQd5CWPCtAwvc5aCWs0jLX8SjA';
+      const token = '7566850313:AAGtoHZqE8F4OOyZv7ctOC5dhBWnCa_7qKE';
       const message = `**Контакты от Hikvision:**\nИмя: **${this.modalData.name}**\nНомер: **${this.modalData.number}**`;
       const url = `https://api.telegram.org/bot${token}/sendMessage`;
       try {
